@@ -7,6 +7,7 @@ import FormValidation from "./component/FormValidation"
 import Context from './component/Context'
 import Header from "./Header";
 import Footer from "./Footer";
+import ReducerHook from "./component/ReducerHook"
 
 import './App.css'
 /*
@@ -57,6 +58,7 @@ const App = () => {
             element={isAuthenticated ? <FormValidation /> : <Navigate to="/api" />}
           />
         <Route path="context" element={<Context/>}/>
+        <Route path="reducerhook" element={<ReducerHook/>}/>
         <Route path="*" element={<About/>}/>
       </Routes>
     </div>

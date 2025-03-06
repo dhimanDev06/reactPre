@@ -12,6 +12,7 @@ const Header = () => {
           <Link to="/api">API</Link>
           <Link to="/form">FormValidation</Link>
           <Link to="/context">Context</Link>
+          <Link to="/reducerhook">ReducerHook</Link>
         </div>
       </nav>
     </header>
