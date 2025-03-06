@@ -11,6 +11,7 @@ const Header = () => {
           <Link to="/about">About</Link>
           <Link to="/api">API</Link>
           <Link to="/form">FormValidation</Link>
+          <Link to="/context">Context</Link>
         </div>
       </nav>
     </header>

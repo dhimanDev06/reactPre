@@ -4,6 +4,7 @@ import UserDetail from "./component/UserDetail";
 import About from "./component/About"
 import ApiCallUsingService from "./component/ApiCallUsingService";
 import FormValidation from "./component/FormValidation"
+import Context from './component/Context'
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -55,6 +56,7 @@ const App = () => {
             path="/form"
             element={isAuthenticated ? <FormValidation /> : <Navigate to="/api" />}
           />
+        <Route path="context" element={<Context/>}/>
         <Route path="*" element={<About/>}/>
       </Routes>
     </div>
