@@ -8,7 +8,8 @@ import Context from './component/Context'
 import Header from "./Header";
 import Footer from "./Footer";
 import ReducerHook from "./component/ReducerHook"
-
+import CallbackHook from "./component/CallbackHook"
+import MemoHook from "./component/MemoHook"
 import './App.css'
 /*
 function App() {
@@ -59,6 +60,8 @@ const App = () => {
           />
         <Route path="context" element={<Context/>}/>
         <Route path="reducerhook" element={<ReducerHook/>}/>
+        <Route path="callbackhook" element={<CallbackHook/>}/>
+        <Route path="memohook" element={<MemoHook/>}/>
         <Route path="*" element={<About/>}/>
       </Routes>
     </div>

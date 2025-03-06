@@ -13,6 +13,8 @@ const Header = () => {
           <Link to="/form">FormValidation</Link>
           <Link to="/context">Context</Link>
           <Link to="/reducerhook">ReducerHook</Link>
+          <Link to="/callbackhook">CallbackHook</Link>
+          <Link to="/memohook">MemoHook</Link>
         </div>
       </nav>
     </header>
