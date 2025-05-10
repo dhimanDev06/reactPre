@@ -11,6 +11,8 @@ import ReducerHook from "./component/ReducerHook"
 import CallbackHook from "./component/CallbackHook"
 import MemoHook from "./component/MemoHook"
 import './App.css'
+import MessageContext from './MessageContext';
+import React, { createContext, useContext, useState } from 'react';
 /*
 function App() {
   const [count, setCount] = useState(0)
@@ -40,13 +42,15 @@ function App() {
     </>
   )
 }*/
-
+// const MessageContext = createContext();
 const App = () => {
+  const [message, setMessage] = useState("Hello from Context!");
   const isAuthenticated = localStorage.getItem("auth") !== null;
   return (
-    <>
+    <MessageContext.Provider value={{ message, setMessage }}>
     <Header />
     <div className="p-4">
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/user/:id" element={<UserDetail />} />
@@ -64,9 +68,10 @@ const App = () => {
         <Route path="memohook" element={<MemoHook/>}/>
         <Route path="*" element={<About/>}/>
       </Routes>
+      
     </div>
     <Footer/>
-    </>
+    </MessageContext.Provider>
   );
 };
 

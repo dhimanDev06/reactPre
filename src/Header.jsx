@@ -1,7 +1,8 @@
-import React from "react";
+import React, { createContext, useContext, useState } from 'react';
 import { Link } from "react-router-dom";
-
+import MessageContext from './MessageContext';
 const Header = () => {
+  const { setMessage } = useContext(MessageContext);
   return (
     <header className="bg-blue-600 text-white">
       <nav className="flex justify-between items-center">
@@ -16,6 +17,9 @@ const Header = () => {
           <Link to="/callbackhook">CallbackHook</Link>
           <Link to="/memohook">MemoHook</Link>
         </div>
+        <button onClick={() => setMessage("Updated by Sibling B!")}>
+        Update Message
+      </button>
       </nav>
     </header>
   );
